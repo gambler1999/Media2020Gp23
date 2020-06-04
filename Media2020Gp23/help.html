@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Help</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="styles.css">
+
+	<style>
+		h2{
+			text-align: left;
+		}
+		#help{
+			font-size: 14px;
+			margin: 5px;
+			line-height: 150%;
+			border: none;
+			display: inline-block;
+			outline: 0;
+			padding: 8px 18px;
+			margin-top: 15px;
+			vertical-align: middle;
+			overflow: hidden;
+			text-decoration: none;
+			color: #fff;
+			background-color: #e9686b;
+			text-align: center;
+			transition: .2s ease-out;
+			cursor: pointer;
+			white-space: nowrap;
+			box-shadow: 0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+			border-radius: 2px;
+			margin-bottom: 10px;
+		}
+	</style>
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="resources/logo.png" alt="Probability Theory" id="logo">
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="home.html" style="font-weight: bold;">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Concept</a>
+				<div class="dropdown-content">
+					<a href="concept/PropertiesofProbability.html" target="_top">Properties of Probability</a>
+					<a href="concept/ProbabilityType.html" target="_top">Probability Type</a>
+					<a href="concept/ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a>
+					<a href="concept/ProbabilityDensityFunction.html" target="_top">Probability Density Function</a>
+					<a href="concept/CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a>
+					<a href="concept/JointDistributionFunction.html" target="_top">Joint Distribution Function</a>
+					<a href="concept/CentralLimitTheorem.html" target="_top">Central Limit Theorem</a>
+					<a href="concept/ExpectationandVariation.html" target="_top">Expectation and Variation</a>
+					<a href="concept/VennDiagram.html" target="_top">Venn Diagram</a>
+					<a href="concept/ConditionalDistributions.html" target="_top">Conditional Distributions</a>
+					<a href="concept/MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a>
+				</div>
+			</li>
+		  	<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav"  href="assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" id="topnavactive" href="help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+
+		<article style="margin: 10px 20px 10px 20px">
+			<h2>Features</h2>
+			<div style="text-align: center;">
+				<video width="480" height="270" autoplay controls>
+					<source src="resources/intro.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<br>
+			<h2>The right way to learn</h2>
+			<div style="margin-left: 10px">
+				<p>
+					In the concept section, you can select the chapter you want to learn and click the left mouse button to enter the page of the corresponding section. Here is the principle and theoretical knowledge, slide the scroll down to get the content outside the current screen.
+				</p>
+				<p>
+					In the experiment section, you can click the left mouse button to select the experiment you want to simulate. We prepared three basic experiments. 
+					<ul>
+						<li>
+							In the coin toss experiment, you can choose the number of coin tosses and click the "begin trial" button to get the experiment results.
+						</li>
+						<li>
+							In the Ball Fetch experiment, click the "Take One" button, the system will randomly draw a small ball from the black box, click this button multiple times to draw multiple small balls without putting back. Click the "Reset" button to reset the experiment.
+						</li>
+						<li>
+							In the Normal Distribution experiment, click the "start" button, and the function image will change according to the change of m. Click the "Stop" button, the value of function and m will stop changing.
+						</li>
+					</ul>	
+				</p>
+				<p>
+					In the Assement section, you can click the dot in front of the option to complete the answer. There is a "check" button under each question so that you can submit answers and view the correct answers and explanations
+				</p>
+			</div>
+ 
+			<br>
+			<h2>Need more help?</h2>
+			<div style="margin-left: 10px">
+				<a id="help" href="mailto:help@probabilitytheory.com">Contact Us</a>
+				<p>Click to send us an email for further assistance.</p>
+			</div>
+			
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

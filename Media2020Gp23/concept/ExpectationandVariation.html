@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Properties of Expectation and Variation</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+  
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+	    <nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" id="navlinkactive" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+
+		<article>
+			
+
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Properties of Expectation and Variation</h2><br><hr/>
+	<div class="head3"><h3>Definition:</h3></div><br> 
+	<p>As we mentioned earlier, the theory of continuous random variables is very similar to the theory of discrete  
+	 random variables. In particular, usually summations are replaced by integrals and PMFs are replaced by PDFs.  
+	 The proofs and ideas are very analogous to the discrete case, so sometimes we state the results without  
+	 mathematical derivations for the purpose of brevity.</p> 
+	  
+	 <p>Remember that the expected value of a discrete random variable can be obtained as 
+	 $$EX=\sum_{x_k \in R_X} x_k P_X(x_k).$$ 
+	 	 </div>
+	  
+	 <hr/>
+	 
+	 <div class="head3"><h3>Variance:</h3></div><br> 
+	 <p>Remember that the variance of any random variable is defined as 
+	 $$\textrm{Var}(X)=E\big[(X-\mu_X)^2\big]=EX^2-(EX)^2.$$ 
+	
+	  
+	 <p>Also remember that for $a,b \in \mathbb{R}$, we always have 
+	 $$\textrm{Var}(aX+b)=a^2 \textrm{Var}(X).$$</p> 
+	  
+	 <hr/>
+	<div class="head3"><h3>Example:</h3></div><br> 
+	 Let $X$ be a continuous random variable with PDF 
+	 \begin{equation} 
+	 \nonumber f_X(x) = \left\{ 
+	 \begin{array}{l l} 
+	 \frac{3}{x^4} & \quad x \geq 1\\ 
+	 0 & \quad \text{otherwise} 
+	 \end{array} \right. 
+	 \end{equation} 
+	 Find the mean and variance of $X$. 
+	 <div class="solvedprob"> 
+	 <ul> 
+	 <li><a><b>Solution</b></a> 
+	 <ul> 
+	 <li> 
+	 <table align="center">	 
+	 <tr> 
+	 <td>$E[X]$</td> 
+	 <td>$=\int_{-\infty}^{\infty} x f_X(x) dx$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$= \int_{1}^{\infty} \frac{3}{x^3} dx$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$= \bigg[-\frac{3}{2}x^{-2} \bigg]_{1}^{\infty}$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$=\frac{3}{2}.$</td> 
+	 </tr> 
+	 </table><br> 
+	 Next, we find $EX^2$ using LOTUS, 
+	 <table align="center">	 
+	 <tr> 
+	 <td>$E[X^2]$</td> 
+	 <td>$=\int_{-\infty}^{\infty} x^2 f_X(x) dx$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$= \int_{1}^{\infty} \frac{3}{x^2} dx$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$= \bigg[-3x^{-1} \bigg]_{1}^{\infty}$</td> 
+	 </tr> 
+	 <tr> 
+	 <td></td> 
+	 <td>$=3.$</td> 
+	 </tr> 
+	 </table><br> 
+	 Thus, we have <br>
+	 $\textrm{Var}(X)=EX^2-(EX)^2=3-\frac{9}{4}=\frac{3}{4}.$
+	 </li> 
+	 </ul> 
+	 </li> 
+	 </ul> 
+	 </div> 
+
+
+	
+		<br>
+		
+
+	</div>
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

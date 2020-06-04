@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Joint Distribution Function</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+			<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" id="navlinkactive" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			
+
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+			<h2>Joint Distribution Function</h2><br><hr/>
+	
+		
+		<div>
+			
+			<div class="head3"><h3><b>Deﬁnition:</b></h3></div><br>
+			<p>
+				The joint distribution function (joint d.f.) of X and Y is deﬁned by <b>F(x,y) = P(X &le; x,Y &le; y), −∞ &#60 x,y &#60 ∞</b>. All joint probability statements about X and Y can, in theory, be answered in terms of their joint distribution function by using the equation below.
+			</p>
+			<br>
+			<hr/>
+			
+			<div class="head3"><h3><b>Proposition:</b></h3></div><br>
+			<p>
+				The joint distribution function F(x,y) is such that 
+			</p>
+			<ol><br>
+				<li>for any x1 &#60 x2, F(x1,y) &le; F(x2,y); for any y1 &#60 y2, F(x,y1) &le; F(x,y2).</li><br>
+				<li>F(−∞,y) = 0, F(x,−∞) = 0, F(∞,∞) = 1. </li><br>
+				<li>$\lim\limits_{x\rightarrow + x^+_0} F(x,y) = F(x_0,y)$,$\lim\limits_{y\rightarrow + y^+_0} F(x,y) = F(x,y_0)$</li><br>
+			</ol>
+			
+		</div>
+
+		
+	
+	</div>
+	<hr/>
+
+	<div class="head3"><h3><b>Continuous Random Vectors:</b></h3></div><br>
+	
+	<div>
+		<p>
+			Let X and Y be two continuous random variables. The random variables X and Y are called (jointly) continuous if the joint distribution function F(x,y) can be expressed by the joint probability density function (joint p.d.f.) f(x,y) as
+			$$F(x,y)=\int_{−∞}^{y}\int_{−∞}^{x}f(u,v){{\rm d}u}{{\rm d}v}$$
+		</p>
+		<p>
+			The joint p.d.f. f(x,y) has the following properties: 
+		</p>
+		<p>
+			1) f(x,y) > 0 for any point (x,y) ∈R×R; 
+		</p>
+		<p>
+			2)$\int_{−∞}^{+∞}\int_{−∞}^{+∞}f(x,y){{\rm d}x}{{\rm d}y}=1$
+		</p>
+	</div><br><hr/>
+	
+	<div class="head3"><h3><b>Example:</b></h3></div><br>
+	<div>
+		<p>
+			A bank operates both a drive-up facility and a walk-up window. On a randomly selected day, let X be the proportion of time that the drive-up facility is in use (at least one customer is being served or waiting to be served) and Y be the proportion of time that the walk-up window is in use. Then the set of possible values for (X,Y ) is the rectangle D = {(x,y) : 0 &le; x &le; 1,0 &le; y &le; 1}. Suppose that the joint p.d.f. of (X,Y ) is given by
+			$$f(x,y)=\begin{cases}6/5(x+y^2)&\text{0&le;x&le;1,0&le;y&le;1}\\\\0&\text{otherwise}\end{cases}$$
+		</p>
+		<ol>
+			<li>Verify that f(x,y) is a legitimate joint p.d.f.</li>
+			<li>Calculate the value of P(0 &le; X &le; 1/4,0 &le; Y &le; 1/4)</li>
+		</ol>
+		<ol>
+			<li>The d.f. of the single variable X can be derived from the joint d.f. F(x,y) as follows, for −∞ &#60 x &#60 ∞, FX(x) = P(X 6 x) = P(X &#60 x,Y &#60 ∞) = F(x,∞) </li>
+			<li>$P(A_{55}|A_{50}) = P(A_{55} \cap A_{50})/P(A_{50}) = P A_{55})/P(A_{50}) ≈ 0.965$</li>
+		</ol>
+	
+
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

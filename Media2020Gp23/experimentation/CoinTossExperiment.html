@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Coin Toss Experiment</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo">
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Concept</a>
+				<div class="dropdown-content">
+					<a href="../concept/PropertiesofProbability.html" target="_top">Properties of Probability</a>
+					<a href="../concept/ProbabilityType.html" target="_top">Probability Type</a>
+					<a href="../concept/ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a>
+					<a href="../concept/ProbabilityDensityFunction.html" target="_top">Probability Density Function</a>
+					<a href="../concept/CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a>
+					<a href="../concept/JointDistributionFunction.html" target="_top">Joint Distribution Function</a>
+					<a href="../concept/CentralLimitTheorem.html" target="_top">Central Limit Theorem</a>
+					<a href="../concept/ExpectationandVariation.html" target="_top">Expectation and Variation</a>
+					<a href="../concept/VennDiagram.html" target="_top">Venn Diagram</a>
+					<a href="../concept/ConditionalDistributions.html" target="_top">Conditional Distributions</a>
+					<a href="../concept/MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav"id="topnavactive" href="#experimentation">Experimentation</a></li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Experiment</p></li>
+				<li><a class="navlink" id="navlinkactive" href="CoinTossExperiment.html" target="_top">Coin Toss Experiment</a></li>
+				<li><a class="navlink" href="BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a></li>
+				<li><a class="navlink" href="NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<h2>Coin Toss Experiment</h2><br>
+			<div>
+				<form> 
+				<label><input type="radio" name="timesbtn" id="t10" value="10" checked="checked">10 Times</label>
+				<label><input type="radio" name="timesbtn" id="t20" value="20">20 Times</label>
+				<label><input type="radio" name="timesbtn" id="t30" value="30">30 Times</label>
+				<label><input type="radio" name="timesbtn" id="t40" value="40">40 Times</label>
+				<label><input type="radio" name="timesbtn" id="t50" value="50">50 Times</label>
+				<label><input type="radio" name="timesbtn" id="t50" value="100">100 Times</label>
+				</form> 
+				<br>
+				<button id="trialbtn">Begin Trial</button>
+				<br>
+				<p id="probred"></p>
+				<p id="probblack"></p>
+				<br>
+
+			</div>
+
+
+
+			<br>
+
+			<canvas id="ball1" width="50" height="50" style="border: 1px;">Your browser does not support the HTML canvas tag.</canvas>
+			<canvas id="ball2" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball3" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball4" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball5" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball6" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball7" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball8" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball9" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball10" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball11" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball12" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball13" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball14" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball15" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball16" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball17" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball18" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball19" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball20" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball21" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball22" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball23" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball24" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball25" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball26" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball27" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball28" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball29" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball30" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball31" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball32" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball33" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball34" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball35" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball36" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball37" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball38" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball39" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball40" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball41" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball42" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball43" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball44" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball45" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball46" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball47" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball48" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball49" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball50" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball51" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball52" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball53" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball54" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball55" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball56" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball57" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball58" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball59" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball60" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball61" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball62" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball63" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball64" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball65" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball66" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball67" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball68" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball69" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball70" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball71" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball72" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball73" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball74" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball75" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball76" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball77" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball78" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball79" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball80" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball81" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball82" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball83" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball84" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball85" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball86" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball87" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball88" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball89" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball90" width="50" height="50" style="border: 1px;"></canvas>
+			<br>
+			<canvas id="ball91" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball92" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball93" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball94" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball95" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball96" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball97" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball98" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball99" width="50" height="50" style="border: 1px;"></canvas>
+			<canvas id="ball100" width="50" height="50" style="border: 1px;"></canvas>
+
+
+			<script>
+				btn = document.getElementById("t10");
+				btn.checked = true;
+				for (var i = 1; i <= 10; i++) {
+					var c = document.getElementById("ball" + i);
+					var ctx = c.getContext("2d");
+					ctx.beginPath();
+					ctx.arc(25,25,20,0,2*Math.PI);
+					ctx.stroke();
+				} 
+
+				obj = document.getElementsByName("timesbtn");
+
+				 if(obj!=null){
+			        var i;
+			        for(i=0;i<obj.length;i++){
+			            obj[i].addEventListener("click", setball)     
+			            
+			        }
+			    }
+
+			    var totaltimes = 10;
+
+
+				function setball(){
+				    for(i=0;i<obj.length;i++){
+			        	if(obj[i].checked){
+			        		totaltimes = obj[i].value;
+			        		for (var i = 1; i <= 100; i++) {
+								var c = document.getElementById("ball" + i);
+								var ctx = c.getContext("2d");
+								c.height=c.height;  
+							}   
+			        		for (var i = 1; i <= totaltimes; i++) {
+								var c = document.getElementById("ball" + i);
+								var ctx = c.getContext("2d");
+								ctx.beginPath();
+								ctx.arc(25,25,20,0,2*Math.PI);
+								ctx.stroke();
+							}
+							document.getElementById("probred").innerHTML= "";
+							document.getElementById("probblack").innerHTML= "";
+						}
+			        }
+			    
+				}
+
+
+
+
+				document.getElementById("trialbtn").addEventListener("click", getball);
+				var ballnum = 1;
+			    var redcolor = 0;
+			    var blackcolor = 0;
+				function getball(){
+					if (totaltimes != 0){
+						while (ballnum <= totaltimes) {
+							var c = document.getElementById("ball" + ballnum);
+							var ctx = c.getContext("2d");
+							ctx.beginPath();
+							ctx.arc(25,25,20,0,2*Math.PI);
+							ctx.stroke();
+
+							rand = Math.random();
+
+							if(rand <= 0.5){
+								ctx.fillStyle = "red";
+								redcolor++;
+							}
+							else{
+								ctx.fillStyle = "black";
+								blackcolor++;
+							}
+							
+
+							ctx.fill();
+							ballnum++;
+						}
+						ballnum = 1;
+						document.getElementById("probred").innerHTML= "The probability for red is:" + (redcolor/totaltimes);
+						document.getElementById("probblack").innerHTML= "The probability for black is:" + (1 - redcolor/totaltimes);
+						redcolor = 0;
+						blackcolor = 0;
+					}
+				}
+				
+			</script> 
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Probability Density Function</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+			<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" id="navlinkactive" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			
+
+	<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Concept Explanation of Probability Density Function</h2><br><hr />
+	
+	<!-- 正文用 div 括起来 -->
+	<div>
+
+		<!-- 正文中的一部分用 div 括起来 -->
+		<div class="head3"><h3>Definition: </h3></div><br>
+		<div>
+			<!-- 子标题 -->
+			
+
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				For a one-dimensional real random variable X, let its cumulative distribution function be F(x), if there is a measurable function f(x) that satisfies:F(x)=$\int_{−∞}^{+∞}f(t){\rm d}t$,
+				then X is a continuous random variable and f(x) is its probability density function.
+			</p>
+			
+			<!-- 图片1帮助解释概念的图片！！！！！，源文件统一放images文件夹 只用改 src alt title figcaption , id border请不要改哦 -->
+			<figure>
+					<div class="center">	<img src="images/density1.jpg" alt="Union" title="Union" id="image" border="0" />
+						<figcaption><b>Fig.1.1 - Probability density of normal function</b></figcaption></div>
+			</figure>
+			<br> <!-- 图片结束要换行 -->
+		
+			<!-- 又是一段文字 -->
+			<p>
+				Since the value of the random variable X depends only on the integral of the probability density function, 
+				the value of the probability density function at individual points does not affect the performance of the random variable. 
+				To be more precise, if there are only a limited number of countable infinite points of a function and the probability density function of X, 
+				or the measure is 0 to the entire real axis (which is a zero measurement set), then this function also can be the probability density function of X.
+				
+			</p>
+		</div> <!-- 第一部份结束 -->
+
+		<!-- 用横线划分一下内容 -->
+		<br><hr />
+		
+		<!-- 正文中的一部分用 div 括起来 -->
+		<div class="head3"><h3>Definition Interpretation: </h3></div>
+		<div>
+
+
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				<b>In mathematics</b>, the probability density function of a continuous random variable (which can be simply referred to as the density function when it is not confusing) is a function that describes the probability of the output value of this random variable near a certain value point.
+				The probability that the value of the random variable falls within a certain area is the integral of the probability density function in this area.
+				<br><br>
+				When the probability density function exists, the cumulative distribution function is the integral of the probability density function. 
+				The probability density function is generally marked in lower case.
+			</p>
+			
+
+		</div> <!-- 第一部份结束 -->
+			<br><hr />
+		
+		<!-- 正文中的一部分用 div 括起来 -->
+		<div class="head3"><h3>Application Scenario:</h3></div>
+		<div>
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				Probability Density Functions are a statistical measure used to gauge the likely outcome of a discrete value, e.g., the price of a stock or ETF.
+			</p>
+			<br>
+			<ul>
+				<li>PDFs are plotted on a graph typically resembling a bell curve, with the probability of the outcomes lying below the curve.</li><br>
+				<li>A discrete variable can be measured exactly, while a continuous variable can have infinite values.
+					PDFs can be used to gauge the potential risk/reward of including a particular security/fund in a portfolio.</li><br>
+				<li>PDFs are used to gauge the risk of a particular security, such as an individual stock or ETF. They are typically depicted on a graph, 
+					with a normal bell curve indicating neutral market risk, and a bell at either end indicating greater or lesser risk/reward. A bell at 
+					the right side of the curve suggests greater reward, but with lesser likelihood, while a bell on the left indicates lower risk and lower reward.</li>							
+			</ul>
+
+		</div> <!-- 第一部份结束 -->
+			<br><hr />
+		
+		<div class="head3"><h3>Example: </h3></div>
+		<div>
+			<!-- 子标题 -->
+			<!-- 一段文字用 p 括起来 -->
+			<p> 
+				<b>Suppose a species of bacteria typically lives 4 to 6 hours. What is the probability that a bacterium lives exactly 5 hours?</b> 
+				<br><br>
+				
+				<b>The answer is 0%.</b><br><br>
+				A lot of bacteria live for approximately 5 hours, but there is no chance that any given bacterium dies at exactly 5.0000000000... hours.
+				<br>
+				Instead one might ask: What is the probability that the bacterium dies between 5 hours and 5.01 hours? Suppose the answer is 0.02 (i.e., 2%). 
+				Next: What is the probability that the bacterium dies between 5 hours and 5.001 hours? The answer should be about 0.002, 
+				since this time interval is one-tenth as long as the previous. The probability that the bacterium dies between 5 hours and 5.0001 hours should be about 0.0002, and so on.
+				<br><br>
+				In these three examples, the ratio (probability of dying during an interval) / (duration of the interval) is approximately constant, and equal to 2 per hour (or 2 hour−1). 
+				For example, there is 0.02 probability of dying in the 0.01-hour interval between 5 and 5.01 hours, and (0.02 probability / 0.01 hours) = 2 hour−1. 
+				This quantity 2 hour−1 is called the probability density for dying at around 5 hours.
+				<br><br>
+				Therefore, in response to the question "What is the probability that the bacterium dies at 5 hours?", a literally correct but unhelpful answer is "0", but a better answer can be written as (2 hour−1) dt. 
+				This is the probability that the bacterium dies within a small (infinitesimal) window of time around 5 hours, where dt is the duration of this window.
+				<br><br>
+				For example, the probability that it lives longer than 5 hours, but shorter than (5 hours + 1 nanosecond), is (2 hour−1)×(1 nanosecond) ≃ 6×10−13 (using the unit conversion 3.6×1012 nanoseconds = 1 hour).
+				<br><br>
+				There is a probability density function f with f(5 hours) = 2 hour−1. The integral of f over any window of time (not only infinitesimal windows but also large windows) is the probability that the bacterium dies in that window.
+			</p>
+			
+			
+
+		</div> <!-- 第一部份结束 -->
+
+	</div>
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

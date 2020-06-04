@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Calculation of Random Event</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" id="navlinkactive" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+
+				<h2>Calculation of Random Event </h2><br><hr/>
+	<div>
+		   <div class="head3"><h3><b>Deﬁnition:</b></h3></div>
+			<p>
+			  To record the experiment data, we use these two main paramaters:
+			</p><br>
+			<ul><i>
+				<li>Each possible outcome: <b>sample point (ω)</b> </li><br>
+				<li>The set of all possible outcomes: <b>sample space (Ω)</b> </li><br>
+			</i></ul>
+
+			<p>
+               Any subset of the sample space Ω is known as an <b>random event</b> or <b>event</b>. Events are usually denoted by capital letters A,B,C,···. Those events <b>must occur</b> in the experiment are called the <b>inevitable events</b>. Sample space <b>Ω</b> is an inevitable event.
+               Those <b> not happen anytime</b> are said to be <b>impossible events</b>. We usually denote impossible events by <b>∅</b>.  
+			</p><br>
+			<center><table border = "1"><center>
+				<tr>
+					<th>Notation</th>
+					<th>Set jargon</th>
+					<th>Probability jargon</th>
+				</tr>
+				<tr>
+					<th>Ω</th>
+					<th>Collection of objects</th>
+					<th>Sample space</th>
+				</tr>
+				<tr>
+					<th>ω</th>
+					<th> Member of Ω </th>
+					<th>PElementary event, outcome </th>
+				</tr>
+				<tr>
+					<th>$A$</th>
+					<th> Subset of Ω </th>
+					<th> $A$ Subset of Ω Events that some outcome in $A$ occurs  </th>
+				</tr>
+				<tr>
+					<th>$A$ or $\overline{A}$</th>
+					<th> Complement of $A$ </th>
+					<th>Event that no outcome in $A$ occurs </th>
+				</tr>
+				<tr>
+					<th>${A}\bigcap{B}$</th>
+					<th>Intersection</th>
+					<th> Both $A$ and $B$ </th>
+				</tr>
+				<tr>
+					<th>${A}\bigcup{B}$</th>
+					<th> Union </th>
+					<th> Either $A$ or $B$ or both</th>
+				</tr>
+				<tr>
+					<th>$A−B$ </th>
+					<th>Diﬀerence</th>
+					<th>$A$, but no $B$ </th>
+				</tr>
+				<tr>
+					<th>${A}\subseteq{B}$</th>
+					<th>Inclusion</th>
+					<th> If $A$, then $B$ </th>
+				</tr>
+				<tr>
+					<th>∅</th>
+					<th>Empty set </th>
+					<th>Impossible event </th>
+				</tr>
+				<tr>
+					<th>Ω</th>
+					<th>Whole space  </th>
+					<th>Certain set </th>
+				</tr>
+			</center></table></center>
+			<br><hr/>
+			<div class="head3"><h3><b>Basic rules:</b></h3></div>
+			<p>
+			   Let A,B and C be the random events of experiment E. The operations of the events will satisfy the following rules: 
+			</p><br>
+			
+			<div class="center">
+			
+				<b>Commutatively:</b> ${A}\bigcup{B}$ = ${B}\bigcup{A}$, $AB = BA$<br>
+				<b>Associatively:</b> ${A}\bigcup{({B}\bigcup{C})}$= ${({A}\bigcup{B})}\bigcup{C}$ =${A}\bigcup{B}\bigcup{C}$. $A(BC) = (AB)C = ABC$.<br><br>
+				<b>Distributively: </b>${A}\bigcup{({B}\bigcap{C})} = {({A}\bigcup{B})}\bigcap{({A}\bigcup{C})}$, ${A}{({B}\bigcup{C})} = {({A}\bigcap{B})}\bigcup{({A}\bigcap{C})}$<br><br>
+				<b>De Morgan’s law: </b>${A}\bigcup{\overline{B}}$ = ${\overline{A}}\bigcap{\overline{B}}$, ${A}\bigcap{\overline{B}}$ = ${\overline{A}}\bigcup{\overline{B}}$<br><br>
+			
+			</div>
+			
+			<p>
+				In addition, there are some common properties, such as 
+			</p><br>
+			
+			<div class="center">
+				$\overline{\overline{A}}$ = ${A}$<br><br>
+				${{A}\bigcap{B}}\subset{A}$ and ${{A}\bigcap{B}}\supset{B}$<br><br>
+				${{A}\bigcup{B}}\supset{A}$ and ${{A}\bigcup{B}}\subset{B}$<br><br>
+				$A−B$ = $A−AB$ = $\overline{AB}$<br><br>
+				${A}\bigcup{B}$ = ${A}\bigcup{{\overline{A}}B}$
+			</div>
+			
+			<br><hr/>
+			<div class="head3"><h3><b>Example:</b></h3></div>
+			<div>
+				<p>
+					Suppose that A,B and C are three events and D = {at least one of the three events will occur}. Try to describe the event D by events A,B and C.}
+				</p><br>
+				<p><b>Solution:</b></p><br>
+				<p>
+					We describe the event D by three diﬀerent ways:
+					<br><ol>
+						<li>directed method: $D = ABC$,</li><br>
+						<li>decomposition method: $D = {(AB)C}\bigcap{ABC}\bigcap{A(BC)}$</li><br>
+						<li>inverse method: $D = (A,B and C will not occur) = ABC$.</li><br>
+					</ol> 
+				</p>
+			</div>
+			</div>
+
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

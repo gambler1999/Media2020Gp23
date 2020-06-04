@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Venn Diagram</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		    <nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" id="navlinkactive" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+		<article>
+			
+	<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Venn diagram</h2><br>
+	<hr/>
+	<!-- 正文用 div 括起来 -->
+	<div>
+		<!-- 一段文字用 p 括起来 -->
+		<div class="head3"><h3 >Origin:</h3></div><br>
+		<p><b>John Venn</b> was a 19th-century British philosopher and mathematician. 
+			He invented the Venn diagram in 1881. 
+			There is a memorial to his invention on the stained glass window of Caius College in Cambridge University.</p>
+			<figure>
+					<div class="center"><img src="images/people.jpg" id="chapter_image" alt="Intersection" title="Intersection" border="0"/> 
+					<figcaption><b>Fig.1.1 - John Venn August 4, 1834-April 4, 1923</b></figcaption></div>
+		  </figure>
+		    <br>	
+        <hr/>
+		<!-- 一段文字用 p 括起来 -->
+		<div class="head3"><h3>Definition:</h3></div><br>
+		<p>Venn diagram is a <b>sketch</b> used to represent sets in a less strict sense in the so-called branch of set theory mathematics.
+			They are used to show mathematical or logical connections between different groups of things (collections), 
+			and are particularly suitable for representing "rough relationships" between collections (or) classes. 
+			It is also often used to help infer (or understand) Derivation process) Some laws about set operations (or class operations).
+		</p>
+		<figure>
+					<div class="center"><img src="images/zz.jpg" id="chapter_image" alt="Intersection" title="Intersection" border="0"/>
+					<figcaption><b>Fig.1.2 - Representing collections with Venn diagram</b></figcaption></div>
+		  </figure>
+		    <br>	
+		<hr/>
+	    <div class="head3"><h3>Example:</h3></div><br>
+	    <p>In the Venn diagram method, if there is a discourse, a rectangular box (inner area) represents the discourse; 
+	    	each set (or class) is represented by a circle / ellipse (inner area). 
+	    	Two circles / ellipse intersect, and the intersection part represents the common elements of two sets (or classes).
+	    	 Two circles / ellipse do not intersect (separate or tangent, but in fact, tangent in Venn diagram is meaningless , 
+	    	 <b>Because the Venn diagram is represented by the internal area of the graph</b>), it means that these two sets (or classes) have no common elements.
+	    </p>
+	    <figure>
+					<div class="center"><img src="images/22.jpg" id="chapter_image" alt="Intersection" title="Intersection" border="0"/>
+					<figcaption><b>Fig.1.3</b></figcaption></div>
+		 
+		  </figure>
+		    <br>	
+		 <p><b>For example</b>, a yellow circle (set<b> A</b>) can represent all living things on two feet. 
+		 	The blue circle (set<b> B</b>) can represent all living creatures that can fly. 
+		 	The area where the yellow and blue circles overlap (called the intersection) contains all living creatures that are flying and biped-such as parrots.
+		 	 (Imagine each individual living creature type as a point in this picture).
+		</p>
+            People and penguins will be in the orange circle that does not overlap with the blue circle. 
+            Mosquitoes have hexapods and can fly, so the mosquito points can be in the blue circle that does not overlap with the orange circle. 
+            Things that are not bipedal and cannot fly (such as whales and rattlesnakes) can be represented as points outside these two circles. 
+            Technically, the Venn diagram above can be interpreted as "the connection between set<b> A </b>and set<b> B</b>. 
+            They can have some (but not all) elements that are common".
+
+        </p>
+        	<figure>
+					<div class="center"><img src="images/2.png" id="chapter_image" alt="Intersection" title="Intersection" width="300px" height="275px"/>
+					<figcaption><b>Fig.1.4</b></figcaption></div>
+		  </figure>
+		    <br>		
+         <p>  The combined area of sets<b> A</b> and <b>B </b>is called the union of sets<b> A </b>and<b> B</b>. 
+         	In this case, the union contains everything that is either biped, or can fly, or is biped and can fly. 
+         	The overlapping circles imply that the intersection of the two sets is not empty-that is, in fact there are living things in yellow and blue circles at the same time.
+         	
+        </p>
+		
+		<figure>
+					<div class="center"><img src="images/1.png" id="chapter_image" alt="Intersection" title="Intersection" width="300px" height="200px"/>
+					<figcaption><b>Fig.1.5</b></figcaption></div>
+		</figure>
+		<br>		
+		
+	    <p>In this example, 
+	    	one collection is completely inside another collection.
+	    	 We say that set <b>A</b> is all the different types of cheese that can be found in the world, 
+	    	 and set <b>B</b> is all the food that can be found in the world. From this picture, 
+	    	 you can see that all cheese is food, but not all food is cheese. 
+	    	 Furthermore, there is no common element (member of the set) between set<b> C</b> (such as metal creations) and set<b> B</b>. 
+	    	 From this we can logically conclude that no cheese is a metal creation (or vice versa). 
+	    	 Formally, the above graph can be interpreted mathematically as "set<b> A </b>is a true subset of set <b>B</b>, and set <b>C </b>and set <b>B</b> have no common elements."
+	    </p>
+		
+	<figure>
+		<div class="center"><img src="images/3.png" id="chapter_image" alt="Intersection" title="Intersection" width="300px" height="200px"/>
+		<figcaption><b>Fig.1.6</b></figcaption></div>
+	</figure>
+	<br>
+	
+	<p>Or interpreted as a <b>syllogism</b> </p>
+		<ul>
+			<li>All <b>As</b> is <b>Bs</b></li>
+			<li>No <b>Cs</b> is<b> Bs</b></li>
+			<li>So, no <b>Cs</b> is <b>As</b></li>
+			<li>So, no <b>As </b>is<b> Cs</b></li>
+		</ul>
+	
+	
+	</div>
+
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

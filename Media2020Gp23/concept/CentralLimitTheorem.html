@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Central Limit Theorem</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	
+
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+	    <nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" id="navlinkactive" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			
+
+				<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Central Limit Theorem</h2><br><hr/>
+	<div>
+		<div>
+		<div class="head3">	<h3>Definition:</h3></div><br>
+	 <p><i>The <b>central limit theorem (CLT)</b> is one of the most important results in probability theory. It states that, under certain conditions, the sum of a large number of random variables is approximately normal.</i> Here, we state a version of the CLT that applies to i.i.d. random variables. Suppose that $X_1$, $X_2$ , ... , $X_{\large n}$ are i.i.d. random variables with expected values $EX_{\large i}=\mu < \infty$ and variance $\mathrm{Var}(X_{\large i})=\sigma^2 < \infty$. Then as we saw above, the sample mean $\overline{X}={\large\frac{X_1+X_2+...+X_n}{n}}$ has mean $E\overline{X}=\mu$ and variance $\mathrm{Var}(\overline{X})={\large \frac{\sigma^2}{n}}$. Thus, the normalized random variable</p>
+	
+	 <p>\begin{align}%\label{}
+	 Z_{\large n}=\frac{\overline{X}-\mu}{ \sigma / \sqrt{n}}=\frac{X_1+X_2+...+X_{\large n}-n\mu}{\sqrt{n} \sigma}
+	 \end{align}
+	 has mean $EZ_{\large n}=0$ and variance $\mathrm{Var}(Z_{\large n})=1$. The central limit theorem states that the CDF of $Z_{\large n}$ converges to the standard normal CDF.</p>
+	</div>
+	<br>
+		<div>
+			<!-- 子标题 -->
+			<hr/><div class="head3"><h3>Continuity Correction:</h3></div><br>
+			<!-- 一段文字用 p 括起来 -->
+			<p>Let us assume that $Y \sim Binomial(n=20,p=\frac{1}{2})$, and suppose that we are interested in $P(8 \leq Y \leq 10)$. We know that a $Binomial(n=20,p=\frac{1}{2})$ can be written as the sum of $n$ i.i.d. $Bernoulli(p)$ random variables:</p>
+			<p>\begin{align}%\label{}
+			Y=X_1+X_2+...+X_{\large n}.
+			\end{align}
+			Since $X_{\large i} \sim Bernoulli(p=\frac{1}{2})$, we have
+			\begin{align}%\label{}
+			EX_{\large i}=\mu=p=\frac{1}{2}, \qquad \mathrm{Var}(X_{\large i})=\sigma^2=p(1-p)=\frac{1}{4}.
+			\end{align}
+			<p>Thus, we may want to apply the CLT to write</p>
+			\begin{align}%\label{}
+			P(8 \leq Y \leq 10) &= P\left (\frac{8-n \mu}{\sqrt{n} \sigma}<\frac{Y-n \mu}{\sqrt{n} \sigma}<\frac{10-n \mu}{\sqrt{n} \sigma}\right)\\
+			&=P\left (\frac{8-10}{\sqrt{5}}<\frac{Y-n \mu}{\sqrt{n} \sigma}<\frac{10-10}{\sqrt{5}}\right)\\
+			&\approx \Phi(0)-\Phi\left (\frac{-2}{\sqrt{5}}\right)\\
+			&=0.3145
+			\end{align}
+			<p>Since, here, $n=20$ is relatively small, we can actually find $P(8 \leq Y \leq 10)$ accurately. We have</p>
+			\begin{align}%\label{}
+			P(8 \leq Y \leq 10) &=\sum_{k=8}^{10}{n \choose k} p^k(1-p)^{n-k}\\
+			&=\bigg[{20 \choose 8}+{20 \choose 9}+{20 \choose 10}\bigg] \bigg(\frac{1}{2}\bigg)^{20}\\
+			&= 0.4565
+			\end{align}</p>
+			<p>We notice that our approximation is not so good. Part of the error is due to the fact that $Y$ is a discrete random variable and we are using a continuous distribution to find $P(8 \leq Y \leq 10)$. Here is a trick to get a better approximation, called <b>continuity correction</b>. Since $Y$ can only take integer values, we can write</p>
+			<p>\begin{align}%\label{}
+			P(8 \leq Y \leq 10) &= P(7.5 < Y < 10.5)\\
+			&=P\left (\frac{7.5-n \mu}{\sqrt{n} \sigma}<\frac{Y-n \mu}{\sqrt{n} \sigma}<\frac{10.5-n \mu}{\sqrt{n} \sigma}\right)\\
+			&=P\left (\frac{7.5-10}{\sqrt{5}}<\frac{Y-n \mu}{\sqrt{n} \sigma}<\frac{10.5-10}{\sqrt{5}}\right)\\
+			&\approx \Phi\left (\frac{0.5}{\sqrt{5}}\right)-\Phi\left (\frac{-2.5}{\sqrt{5}}\right)\\
+			&=0.4567
+			\end{align}</p>
+			<p>As we see, using continuity correction, our approximation improved significantly. The continuity correction is particularly useful when we would like to find $P(y_1 \leq Y \leq y_2)$, where $Y$ is binomial and $y_1$ and $y_2$ are close to each other.</p>
+			
+			<div class=cbox>
+			<p align=center>Continuity Correction for Discrete Random Variables</p>
+			
+			<p>Let $X_1$,$X_2$, $\cdots$,$X_{\large n}$ be independent discrete random variables and let</p>
+			<p>\begin{align}%\label{}
+			Y=X_1+X_2+\cdots+X_{\large n}.
+			\end{align}
+			Suppose that we are interested in finding $P(A)=P(l \leq Y \leq u)$ using the CLT, where $l$ and $u$ are integers.
+			Since $Y$ is an integer-valued random variable, we can write
+			\begin{align}%\label{}
+			P(A)=P(l-\frac{1}{2} \leq Y \leq u+\frac{1}{2}).
+			\end{align}</p>
+			<p>It turns out that the above expression sometimes provides a better approximation for $P(A)$ when applying the CLT. This is called the continuity correction and it is particularly useful when $X_{\large i}$'s are Bernoulli (i.e., $Y$ is binomial).</p>
+			</div>
+			
+
+		<!-- 用横线划分一下内容 -->
+		<br>
+		
+
+	  </div>
+    </div>
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

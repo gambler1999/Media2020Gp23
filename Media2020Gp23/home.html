@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Home</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+<style>
+	/* set layout */
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+	/* Style the header */
+
+header {
+	/*导航栏背景颜色*/
+	background-color: rgba(255,255,255,0.7); 
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	margin: 0;
+  	padding: 0;
+	
+	position: -webkit-sticky; /*Safari*/
+	position: sticky;
+	top: 0;
+}
+
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li.topnav, .dropdown {
+	float: left;
+}
+
+li a.topnav, .dropbtn {
+	color: black;  /*导航栏字体颜色*/
+	display: inline-block;
+	text-align: center;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+li a.topnav:hover:not(.active), .dropdown:hover:not(.active) .dropbtn {
+	background-color: white; /*导航栏鼠标指向背景颜色*/
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;  /*导航栏下拉栏背景颜色*/
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;   /*导航栏下拉栏字体颜色*/
+	font-size: 15px;
+	padding: 5px 10px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: rgb(36, 196, 131);  /*导航栏下拉栏鼠标指向颜色*/
+	color: white;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#topnavactive {
+	display: block;
+	color: white;  /*导航栏当前位置背景颜色*/
+	background-color: rgb(36, 196, 131);  /*导航栏当前位置字体颜色*/
+}
+
+h1 {
+	text-align: center;
+	line-height: 2;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,0.8);
+}
+
+
+/* Style the footer */
+/* Style the footer */
+footer {
+	background-color: rgb(218, 218, 218);  /*页脚部分颜色*/
+	padding: 10px;
+	text-align: center;
+	color: grey;  /*页脚字体颜色*/
+}
+#slogan {
+	font-size: 30px;
+	line-height: 1;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,0.5);
+	font-family: Verdana, Sans-serif;
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+	<div style="background-image: url(resources/1.jpg);background-repeat: no-repeat; background-attachment: relative ;background-size: cover;background-size: 100%; height: 200px;">
+		<div style="height: 160px; text-align: center;"> <!-- 40px for header -->
+			<img src="resources/logo.png" >
+			<p id="slogan">Enjoy Your Learning</p>
+
+		</div>
+
+		<!-- top bar -->
+		<header>
+			<ul class="topnav" style="background-color: transparent;">
+				<li class="topnav"><a class="topnav" id="topnavactive" href="#home" style="font-weight: bold;">Home</a></li>
+				<li style="float: center;" class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Concept</a>
+					<div class="dropdown-content">
+						<a href="concept/PropertiesofProbability.html" target="_top">Properties of Probability</a>
+						<a href="concept/ProbabilityType.html" target="_top">Probability Type</a>
+						<a href="concept/ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a>
+						<a href="concept/ProbabilityDensityFunction.html" target="_top">Probability Density Function</a>
+						<a href="concept/CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a>
+						<a href="concept/JointDistributionFunction.html" target="_top">Joint Distribution Function</a>
+						<a href="concept/CentralLimitTheorem.html" target="_top">Central Limit Theorem</a>
+						<a href="concept/ExpectationandVariation.html" target="_top">Expectation and Variation</a>
+						<a href="concept/VennDiagram.html" target="_top">Venn Diagram</a>
+						<a href="concept/ConditionalDistributions.html" target="_top">Conditional Distributions</a>
+						<a href="concept/MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a>
+					</div>
+				</li>
+				<li style="float: center;" class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+					<div class="dropdown-content">
+						<a href="experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+						<a href="experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+						<a href="experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+					</div>
+				</li>
+				<li style="float: center;" class="topnav"><a class="topnav" href="assessment/question.html">Assessment</a></li>
+				<li style="float: right;"><a class="topnav" href="help.html">Help</a></li>
+		</ul>
+		</header>
+	</div>
+
+	<h1>Life is an event, interwoven by</h1>
+	<h1 style="font: bold; color; font-family: Monospace; font-size: 50px; letter-spacing: 2px">PROBABILITY</h1>
+	<h1>Let's Learn From The Best!</h1>
+	<img src="resources/2.jpg" width="100%">
+
+ 	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+
+
+</body>
+</html>

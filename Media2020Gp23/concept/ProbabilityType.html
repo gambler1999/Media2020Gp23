@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Probability Type</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+    
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+			<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" id="navlinkactive" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+
+		<article>
+			
+
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Probability Type</h2><br><hr />
+	<div>
+		<div class="head3"><h3>Conditional Probability:</h3></div>
+		<div>
+		<p>
+			<b>Definition 1</b> <i>The <b>conditional probability</b> of an event A given that event B has occurred is defined by $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$ provided that $P(B) > 0$.</i>
+		</p><br>
+
+		<p>
+			<b>Example</b> Rolling two dice, what is the probability that at least one die is equal to 2 when the sum of two numbers is less than or equal to 3?<br>We can formally follow the definition of the conditional probability. The sample space is all unordered combinations of two numbers and there are 6 × 6 = 36 basic outcomes. Let the event A be “at least one die is equal to 2” and let the event B be “the sum of two numbers is less than or equal to 3.” Then, A = {(1,2),(2,1),(2,2),(2,3),...,(2,6),(6,2)} and B = {(1,1),(1,2),(2,1)}. Also, $A \cap B = {(1,2),(2,1)}$. Therefore, $P(A \cap B) = 2/36$ and $P(B) = 3/36$ and it follows from the definition of conditional probability that $P(A \mid B) = P(A \cap B)/P(B) = 2/3$.
+
+		</p>
+		<p>
+			By multiplying both sides in the definition of conditional probability $P(A \mid B) = P(A \cap B)$, we $P(B)$ have $P(A \mid B)P(B) = P(A \cap B)$.
+		</p><br>
+		<p>
+			<b>Definition 2</b> <i>The probability of both A and B occur is given by the <b>multiplication rule</b> $$P(A \cap B) = P(B \mid A)P(A) = P(A \mid B)P(B)$$ provided $P(A)$, $P(B) > 0$.</i>
+		</p>
+	    </div>
+		<br><hr />
+
+		<div class="head3"><h3>Statistical Independence:</h3></div>
+		<p>
+			<b>Definition 3</b> <i>Events A and B are <b>statistically independent</b> if and only if $$P(A \cap B) = P(A)P(B)$$.</i>
+		</p>
+		<p>
+			In some cases, we have a good intuition for independence. When we draw a card from a randomly shuffled deck, the event of “drawing Ace” is independent of the event of drawing “Black.” When we fliPtwo coins, the event of “Head in the first coin” is independent of “Head in the second coin.” In other cases, however, whether two events are independent or not is not so obvious—in order to check if two events are independent or not, we need to check the formal condition $P(A \cap B) = P(A)P(B)$.
+		</p><br>
+		<p>
+			<b>Example</b> Roll a fair die once, define A = {2,4,6} and B = {1,2,3,4}. Are the events A and B independent? To answer this, we need to check the formal definition of statistical independence, i.e., whether $P(A \cap B) = P(A)P(B)$ holds or not. Because $A \cap B =$ {2, 4}, we have $P(A \cap B) = 2/6 = 1/3$ while $P(A)P(B) = (1/2)(4/6) = 1/3$ and, therefore, $P(A \cap B) = P(A)P(B)$ holds. That is, A and B are statistically independent.
+		</p><br>
+		<p>
+				By multiplication rule, we can write $P(A \cap B) = P(B \mid A)P(A)$ if $P(A) > 0$. On the other hand, when A and B are independent, we have $P(A \cap B) = P(A)P(B)$. Comparing these two equations, we conclude that, if A and B are statistically independent, then $P(B \mid A) = P(B) when P(A) > 0$. This is intuitive: if A and B are independent, then knowing A happened will not provide any information regarding whether B happened or not.
+		</p>
+	    </div>
+
+	</div>
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

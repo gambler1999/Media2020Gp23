@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Properties of Probability</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" id="navlinkactive" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+				<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Properties of Probability</h2><br>
+	
+	<!-- 正文用 div 括起来 -->
+	<div>
+		<!-- 一段文字用 p 括起来 -->
+		<p>
+			In statistics, we consider <b>random experiments</b>, experiments for which the outcome is random, i.e., cannot be predicted with certainty. The possible outcomes of a random experiment are called the <b>basic outcomes</b> and the collection of all possible basic outcomes is called <b>the sample space</b> denoted by <i>S</i>. Let <i>A</i> be a part of the collection of outcomes in <i>S</i>. Then, <i>A</i> is called an <b>event</b>. If the outcome of the experiment is in A, then we say that <b>event A has occurred</b>.
+		</p><br><hr/>
+	<div class="head3">	<h3>Here is the terminology and notations we use:</h3></div>
+		<div>
+			<ul>
+	  			<li>$\emptyset$ is the <b>empty</b> set. No element is in the empty set $\emptyset$. For example, if $A and B$ does not share any common element, then $A \cap B = \emptyset$.</li><br>
+	  			<li>$A \in B$ means $A$ is a <b>subset</b> of $B$, i.e., any element in $A$ is also in $B$.</li><br>
+	  			<li>$A \cup B$ is the <b>union</b> of A and B. $A \cup B$ is a set that consists of the elements that are contained in either A or B.</li><br>
+	  			<li>$A \cap B$ is the <b>intersection</b> of A and B. $A \cap B$ is a set that consists of the elements that are contained in both A and B.</li><br>
+	  			<li>$\bar{A}$ is the <b>complement</b> of A, i.e., all elements in <i>S</i> that are not in A.</li><br>
+	  			<li>$A_1, A_2,..., A_k$ are <b>mutually exclusive</b> events if $A_i  \cap  A_j = \emptyset$ for all i and j such that $i \neq j$; that is no pair of sets $A_i and A_j$ share common elements so that $A_1, A_2,..., A_k$ are disjoint sets.</li><br>
+	  			<li>$A_1, A_2,..., A_k$ are <b>collectively exhaustive</b> events if $A_1 \cup A_2 \cup...\cup A_k = S$; that is, $A_1, A_2,..., A_k$ collectively cover all elements in $S$.</li><br>
+			</ul>
+		
+		</div>
+		<hr/>
+
+		<div class="head3"><h3>Set operations satisfy the following properties:</h3></div><br>
+		<div>
+		<p>
+			<div id="div2">(Commutative Laws) $A \cup B=B \cup A$ and $A \cap B=B \cap A$ </div><br><br>
+		<div id="div2">	(Associative Laws) $(A \cup B) \cup C=A \cup (B \cup C) $ and $ (A \cap B) \cap C=A \cap (B \cap C)$ </div><br><br>
+		<div id="div2">	(Distributive Laws) $A \cap (B \cup C)=(A \cap B) \cup (A \cap C) $ and $ A \cup (B \cap C)=(A \cup B) \cap (A \cup C)$ </div><br><br>
+		<div id="div2">	(De Morgan’sLaws) $\overline{(A \cup B)}=\bar{A} \cap \bar{B} $ and $ \overline{(A \cap B)}=\bar{A} \cup \bar{B}$ </div><br><br>
+		</p>
+		
+		<p>
+			Given event A defined as a subset of the sample space <i>S</i>, we may consider the probability of event <i>A</i> as the relative frequency that event <i>A</i> happens when we repeat the random experiment an infinitely many times. Formally, we define <b>probability</b> as a function from the space of sets to the space of real values between 0 and 1 as follows.
+		</p>
+		<br>
+		<p>
+			<b>Definition (Probability)</b> <i><b>Probability</b> is a real-valued set function P that assigns, to each event A in the sample space S, a number P(A) such that the following three properties are satisfied:</i>
+		</p>
+
+		<ol><br><i>
+			<li>$P(A)\geq0$</li><br>
+			<li>$P(S)=1$</li><br>
+			<li>if $A_1, A_2,..., A_k$ are events that are mutually exclusive, i.e., $A_i \cap A_j = \emptyset$ for $i \neq j$, then $$P(A_1 \cup A_2 \cup...\cup A_k)=P(A_1)+P(A_2)+...+P(A_k)$$ for any positive integer k.</li>
+		</i></ol><br>
+
+		<p>
+			In the above definition, we consider an infinite countable number of sequence of events by letting $k \rightarrow \infty$.
+		</p>
+
+		<p>
+			For any events A and B in the sample space, probability satisfies the following properties:
+		</p>
+		<ol><br>
+			<li><b>Complimentary rule</b>: For each event A, $P (A) = 1 − P (\bar{A})$.</li><br>
+			<li><b>ddition Rule</b>: $P(A \cup B)=P(A)+P(B)−P(A \cap B)$.</li><br>
+			<li>$P(\emptyset)=0$. This follows from $P(S)=1$ and $S=\emptyset$ so that $P(\emptyset)=1−P(S)=1−1=0$.</li><br>
+			<li>If $A \in B$, then $P(A) \leq P(B)$. This is intuitive because A is contained in B.</li><br>
+			<li>$P(A \cap B)≥P(A)+P(B)−1$.</li><br>
+			<li>$P(A \cap A)=0$ because $A \cap A=\emptyset$.</li><br>
+			<li>$P(A \cup A)=1$ because $A \cup A=S$.</li><br>
+		</ol>
+		<p>
+			Suppose that A and B are mutually exclusive, i.e., $A \cap B = \emptyset$. In this case, $P (A \cap B) = P (\emptyset) = 0$, and it follows from Addition Rule that</p>
+		</p>
+		<br>
+		<p>
+			<div id="div2">$P(A  \cup  B) = P(A) + P(B) − 0 = P(A) + P(B)$.</div>
+			</p>
+	   
+		</div>
+	</div>
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

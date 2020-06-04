@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Ball Fetch Experiment</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo">
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Concept</a>
+				<div class="dropdown-content">
+					<a href="../concept/PropertiesofProbability.html" target="_top">Properties of Probability</a>
+					<a href="../concept/ProbabilityType.html" target="_top">Probability Type</a>
+					<a href="../concept/ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a>
+					<a href="../concept/ProbabilityDensityFunction.html" target="_top">Probability Density Function</a>
+					<a href="../concept/CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a>
+					<a href="../concept/JointDistributionFunction.html" target="_top">Joint Distribution Function</a>
+					<a href="../concept/CentralLimitTheorem.html" target="_top">Central Limit Theorem</a>
+					<a href="../concept/ExpectationandVariation.html" target="_top">Expectation and Variation</a>
+					<a href="../concept/VennDiagram.html" target="_top">Venn Diagram</a>
+					<a href="../concept/ConditionalDistributions.html" target="_top">Conditional Distributions</a>
+					<a href="../concept/MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav"id="topnavactive" href="#experimentation">Experimentation</a></li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Experiment</p></li>
+				<li><a class="navlink" href="CoinTossExperiment.html" target="_top">Coin Toss Experiment</a></li>
+				<li><a class="navlink" id="navlinkactive" href="BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a></li>
+				<li><a class="navlink" href="NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a></li>
+			</ul>
+		</nav>
+
+		<article>
+
+				    <style>
+	        .boxbg {
+	            margin: 0;
+	            padding: 5px;
+	            height: 200px;
+	            background-color: #ddd;
+	            position: relative;
+	        }
+	        button {
+	            margin: 5px;
+	        }
+	        .box2 {
+	            width: 10px;
+	            height: 10px;
+	            background-color: red;
+	            position: absolute;
+	            left: 0;
+	        }
+			.box3{
+				width: 10px;
+				height: 10px;
+				background-color: red;
+				position: absolute;
+				left: 0;
+			}
+			.box4{
+				width: 10px;
+				height: 10px;
+				background-color: yellow;
+				position: absolute;
+				left: 0;
+			}
+			.sox{ width: 100px;
+				 height: 100px;
+				 background-color: black;
+				 position: absolute;
+				 left: 0;}
+	    </style>
+			
+			<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+			<h2>Ball Fetch Experiment</h2>
+			<br>
+			<div class="boxbg">
+				<div id="boxid1" class="box2"></div>
+				<div id="boxid2" class="box2"></div>
+				<div id="boxid3" class="box2"></div>
+				<div id="boxid4" class="box2"></div>
+				<div id="boxid5" class="box3"></div>
+				<div id="boxid6" class="box3"></div>
+				<div id="boxid7" class="box4"></div>
+				<div id="boxid8" class="box4"></div>
+				<div id="boxid9" class="box4"></div>
+				<div id="boxid10" class="box4"></div>
+				<div class="sox"></div>
+			</div>
+				<button>Take one</button>
+				<button onclick="javascript:location.reload()">Reset</button>
+
+			<script>
+				var btnArr = document.getElementsByTagName("button");
+				var count = 1;
+				var box = new Array();
+
+				//绑定事件
+				btnArr[0].onclick = function () {
+				// 最多抽球次数
+				if(count <= 10){
+					var same = true; //判读是否抽过这个球 true 以进入循环
+					while (same){
+						same = false; // 默认没被抽过
+						var boxnum = Math.floor(Math.random() * 10 + 1);
+						box[count] = document.getElementById("boxid" + boxnum);
+						for (var i = 1; i < count; i++) {  //遍历所有之前的球
+							if(box[i] == box[count]) { //如果被抽过
+								same = true;
+								break;
+							}
+						}
+					}
+					//alert(boxnum);
+					animate(box[count], 100 + count * 100);  
+					count++; //已抽次数+1
+					}     
+				};
+
+				// btnArr[1].onclick = function () {
+				// 	for (var i = 1; i < box.length; i++) {
+				// 		animate(box[i], -100 - i * 100);
+				// 	}
+				// 	count = 1;
+				// };
+
+				var timer = null;
+
+				function animate(ele,target){
+					clearInterval(ele.timer);
+					var speed = target>ele.offsetLeft?10:-10;
+					ele.timer = setInterval(function () {
+						//在执行之前就获取当前值和目标值之差
+						var val = target - ele.offsetLeft;
+						ele.style.left = ele.offsetLeft + speed + "px";
+						//目标值和当前值只差如果小于步长，那么就不能再前进了
+						//因为步长有正有负，所有转换成绝对值来比较
+						if(Math.abs(val)<Math.abs(speed)){
+							ele.style.left = target + "px";
+							clearInterval(ele.timer);
+						}
+					},30);
+				}
+				var index =0;
+				function autochange(){
+					var img=document.getElementById("img1");
+					var cui= index % 2 + 1;
+					img.src="../img/pic"+cui+".jpg";
+					index = index+1;
+				}
+
+				function timerauto(){
+					setInterval("autochange()",500);
+				}
+
+				timerauto();
+
+			</script>
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

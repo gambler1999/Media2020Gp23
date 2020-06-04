@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Marginal Probability Function</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		 <nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html"  target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" id="navlinkactive" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+		
+		<article>
+			
+	<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Marginal Probability Function</h2><br>
+	<hr/>
+	<!-- 正文用 div 括起来 -->
+	<div>
+		<!-- 一段文字用 p 括起来 -->
+		<div>
+		<div class="head3"><h3>Definition:</h3></div><br>
+		<p><b>Marginal distribution</b>is also known as edge distribution or marginal distribution. 
+			The probability distribution of the components in the random vector. 
+		     In the definition of the joint distribution function of (ξ, η),let $y \uparrow +\infty$,
+			 then {$n < y$}$\uparrow \Omega$.$\ $Use the lower continuity of probability to get the distribution function of ξ
+			 $$F_1(x)=P(ξ&#60x)={\lim\limits_{y \rightarrow+\infty}F(x,y)}$$
+			 
+		</p>
+		  <p>
+			  The marginal distribution function called ξ. Similarly, the marginal distribution function of η is
+			  $$F_2(y)=P(η&#60x)={\lim\limits_{x \rightarrow+\infty}F(x,y)}$$
+		  </p>
+		
+		<p>Therefore, the numbers on the right and bottom of the table are the respective distributions of ξ and η. 
+			Therefore, it is called edge distribution. 
+			For continuous random vectors (ξ, η), in the definition of the joint distribution function, $ y \rightarrow \infty$
+			gives the marginal distribution function of ξ  
+			$$\int_{-∞}^{x}({\int_{∞}^{+∞}p(u,v){\rm d}u}){\rm d}v$$
+		</p>
+        
+		<p>Therefore, the component ξ is still continuous. There is a marginal density function 
+			$$p(x)=\int_{∞}^{+∞}p(x,y){\rm d}x$$
+		</p>
+
+		
+		<p>Similarly, the component η is also continuous, and its edge density function is
+			$$p(y)=\int_{∞}^{+∞}p(x,y){\rm d}y$$  
+		</p>
+	    </div>
+
+        <hr/>
+		<!-- 一段文字用 p 括起来 -->
+
+		<div>
+		<div class="head3"><h3>Example:</h3></div><br>
+		<p>Consider the joint p.d.f. $ f\{x,y\} $ defined by
+			$$f(x,y)=cxye{^(-x^2-y^2)}$$
+		</p>
+
+		<p>where $ c > 0$ is a constant.
+		<br>
+			<ul>
+			$(a)$ Determine the constant $c$.
+		   </ul>
+		
+		  <ul>
+			$(b)$ Determine the joint d.f. of $(X, Y)$.
+		  </ul>
+		
+		   <ul>
+			$(c)$ Determine the marginal density function of $X$.
+		   </ul>
+		</p>
+		<p><b>Solution</b></p>
+		<p>a)Since
+			$$\int_{-∞}^{+∞}\int_{-∞}^{+∞}f(x,y){\rm d}x{\rm d}y=1$$
+			we have 
+			$$\int_{0}^{+∞}\int_{0}^{+∞}cxye^{(-x^2-y^2)}{\rm d}x{\rm d}y={c\over4}$$
+			So the function can only achieve when c = 4
+		</p>
+		<p>
+			b)The distribution is given by
+			$$\int_{0}^{x}\int_{0}^{y}4uve^{(-u^2-v^2)}{\rm d}u{\rm d}v=(1-e{-x^2})(1-e{-y^2})$$
+		</p>
+		<p>
+			c)The function is
+			$$f_X(x)=\int_{0}^{y}4xye^{(-x^2-y^2)}{\rm d}y=2xe^{-x^2}$$
+		</p>
+	</div>
+	</div>
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

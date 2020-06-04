@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Normal Distribution Experiment</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+		<script>
+		var index =0;
+		function autochange(){
+			var img=document.getElementById("img1");
+			var cui= index  %18+1 //18张图片轮播
+			img.src="img/pic"+cui+".png";
+			
+			index = index+1;
+		}
+		function timerauto(){
+		timer=setInterval("autochange()",100);
+		}
+	</script>
+
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo">
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Concept</a>
+				<div class="dropdown-content">
+					<a href="../concept/PropertiesofProbability.html" target="_top">Properties of Probability</a>
+					<a href="../concept/ProbabilityType.html" target="_top">Probability Type</a>
+					<a href="../concept/ProbabilityDistributionFunction.html" target="_top">Probability Distribution Function</a>
+					<a href="../concept/ProbabilityDensityFunction.html" target="_top">Probability Density Function</a>
+					<a href="../concept/CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a>
+					<a href="../concept/JointDistributionFunction.html" target="_top">Joint Distribution Function</a>
+					<a href="../concept/CentralLimitTheorem.html" target="_top">Central Limit Theorem</a>
+					<a href="../concept/ExpectationandVariation.html" target="_top">Expectation and Variation</a>
+					<a href="../concept/VennDiagram.html" target="_top">Venn Diagram</a>
+					<a href="../concept/ConditionalDistributions.html" target="_top">Conditional Distributions</a>
+					<a href="../concept/MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav"id="topnavactive" href="#experimentation">Experimentation</a></li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+		<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Experiment</p></li>
+				<li><a class="navlink" href="CoinTossExperiment.html" target="_top">Coin Toss Experiment</a></li>
+				<li><a class="navlink" href="BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a></li>
+				<li><a class="navlink" id="navlinkactive" href="NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a></li>
+			</ul>
+		</nav>
+
+		<article>
+		<h2>Normal Distribution Experiment</h2><br>
+		<div style="text-align: center;">
+		<img src="img/pic1.png"id="img1"/>
+		<br>
+		<button onclick="timerauto()">Start</button>
+		<button onclick="clearInterval(timer)"> Stop</button>
+<!-- 		<input type="button" value="Start" onclick="timerauto()">
+		<input type="button" value="Stop" onclick="clearInterval(timer)"> -->
+		</div>
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
+

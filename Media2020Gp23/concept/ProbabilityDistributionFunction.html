@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<!-- 网页标题(章节名字) -->
+	<title>Probability Distribution Function</title>
+	
+	<!-- view -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- chars -->
+	<meta charset="UTF-8">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../styles.css">
+	
+	<!-- js -->
+	<script type="text/javascript" src="newScript.js"></script>
+
+	<!-- formular javascript -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+	</script>
+	<script>
+		MathJax = {
+		  tex: {
+			inlineMath: [['$', '$'], ['\\(', '\\)']]
+		  }
+		};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head>
+
+
+
+
+<body>
+	<!-- logo -->
+	<div id="logodiv">
+		<img src="../resources/logo.png" alt="Probability Theory" id="logo"> <!-- 上右下左 -->
+		
+	</div>
+
+	<!-- top bar -->
+	<header>
+		<ul class="topnav">
+		  	<li class="topnav"><a class="topnav" href="../home.html" style="font-weight: bold;">Home</a></li>
+		  	<li class="topnav"><a class="topnav" id="topnavactive" href="javascript:void(0)">Concept</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Experimentation</a>
+				<div class="dropdown-content">
+					<a href="../experimentation/CoinTossExperiment.html" target="_top">Coin Toss Experiment</a>
+					<a href="../experimentation/BallFetchExperiment.html" target="_top">Ball Fetch Experiment</a>
+					<a href="../experimentation/NormalDistributionExperiment.html" target="_top">Normal Distribution Experiment</a>
+				</div>
+			</li>
+		  	<li class="topnav"><a class="topnav" href="../assessment/question.html">Assessment</a></li>
+		  	<li style="float: right;"><a class="topnav" href="../help.html">Help</a></li>
+		</ul>
+	</header>
+
+	<section>
+
+				<nav>
+			<div id="box">
+			<ul style="margin-top: 20px">
+				<li><p id="navheader">Concept</p></li>
+				<li><a class="navlink" href="PropertiesofProbability.html" target="_top">Properties of Probability</a></li>
+				<li><a class="navlink" href="ProbabilityType.html" target="_top">Probability Type</a></li>
+				<li><a class="navlink" href="ProbabilityDistributionFunction.html" id="navlinkactive" target="_top">Probability Distribution Function</a></li>
+				<li><a class="navlink" href="ProbabilityDensityFunction.html" target="_top">Probability Density Function</a></li>
+				<li><a class="navlink" href="CalculationofRandomEvent.html" target="_top">Calculation of Random Event</a></li>
+				<li><a class="navlink" href="JointDistributionFunction.html" target="_top">Joint Distribution Function</a></li>
+				<li><a class="navlink" href="CentralLimitTheorem.html" target="_top">Central Limit Theorem</a></li>
+				<li><a class="navlink" href="ExpectationandVariation.html" target="_top">Expectation and Variation</a></li>
+				<li><a class="navlink" href="VennDiagram.html" target="_top">Venn Diagram</a></li>
+				<li><a class="navlink" href="ConditionalDistributions.html" target="_top">Conditional Distributions</a></li>
+				<li><a class="navlink" href="MarginalProbabilityFunction.html" target="_top">Marginal Probability Function</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			
+
+			<!-- 正文中的一部分用 div 括起来 -->
+		<!-- 章节标题 用h2 (h1保留)--> <!-- 余下若有子标题从h3开始用到h6 -->
+	<h2>Concept Explanation of Probability Distribution Function</h2><br><hr />
+	
+	<!-- 正文用 div 括起来 -->
+	<div>
+
+		<!-- 正文中的一部分用 div 括起来 -->
+
+			<!-- 子标题 -->
+			<div class="head3"><h3>Definition:</h3></div>
+			<div>
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				The probability distribution function is one of the basic concepts of probability theory. In practical problems, it is often necessary to study <b>the probability that the value of a random variable ξ is less than a certain value x. </b>
+				<br>
+				<br>
+				This probability is a function of x. This function is called the distribution function of the random variable <b>ξ</b> , referred to as the distribution function, and is referred to as $F(x)$, That is, $F(x)$ = P(ξ&#60x) (-∞ &#60x &#60+ ∞), and 
+				it can determine the probability that a random variable falls within any range.
+			</p>
+			
+			<!-- 图片1帮助解释概念的图片！！！！！，源文件统一放images文件夹 只用改 src alt title figcaption , id border请不要改哦 -->
+			<figure>
+					<div class="center">	<img src="images/distributed1.png" alt="Union" title="Union" id="image" border="0" />
+						<figcaption><b>Fig.1.1 - Probability distribution graph </b> </figcaption></div>
+			</figure>
+			<br> <!-- 图片结束要换行 -->
+		    </div>
+
+
+		<!-- 用横线划分一下内容 -->
+		<br><hr />
+		
+		<!-- 正文中的一部分用 div 括起来 -->
+
+			<!-- 子标题 -->
+		<div class="head3">	<h3>Definition Interpretation:</h3></div>
+			<div>
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				The probability distribution function is a <b>mathematical representation of the distribution law of random variables</b>. For any real number x, the probability of the event (X &#60 x ) is of course a function of x. Let F (x) = P (X &#60 x), obviously F (-∞) = 0, F (∞) = 1, and <b>call F (x) the distribution function of the random variable X</b>. 
+				<br>
+				<br>
+				Therefore, the distribution function F (x) completely determines the probability of the event [a≤X≤b], or the distribution function F (x) completely describes the statistical characteristics of the random variable X.
+				Common discrete random variable distribution models include "0-1 distribution", binomial distribution, Poisson distribution, etc .; continuous random variable distribution models include uniform distribution, normal distribution, Rayleigh distribution, etc.
+			</p>
+		    </div>
+		
+			<br><hr />
+		
+		<!-- 正文中的一部分用 div 括起来 -->
+
+			<!-- 子标题 -->
+			<div class="head3">	<h3>Examples:</h3></div><br>
+			<div>
+      
+			<!-- 一段文字用 p 括起来 -->
+			<p>
+				<table border = "1px">
+					<tr>
+						<th>Distribution name</th>
+						<th>Distribution symbol</th>
+						<th>Probability density function (pdf)</th>
+						<th>Mean</th>
+						<th>Variance</th>
+					</tr>
+					<tr>
+						<th>Normal / gaussian</th>
+						<th>X ~ N(μ,σ2)</th>
+						<th>1/(σ$\sqrt{2π}$)*$e^{-(x-μ)^2/2σ^2}$</th>
+						<th>μ</th>
+						<th>$σ^2$</th>
+					</tr>
+
+					<tr>
+						<th>Uniform</th>
+						<th>X ~ U(a,b)</th>
+						<th>\begin{cases}
+							1/(b-a)& \text{a≤x≤b}\\\\
+							0& \text{otherwise}
+							\end{cases}</th>
+						<th>a+b/2</th>
+						
+						<th>$(b-a)^2/12$</th>
+					</tr>
+					<tr>
+						<th>Exponential</th>
+						<th>X ~ exp(λ)</th>
+						<th>\begin{cases}
+							$λe^{-λx}& \text{0≤x}\\\\
+							0& \text{otherwise}
+							\end{cases}</th>
+						<th>1/λ</th>
+						
+						<th>$1/λ^2$</th>
+					</tr>
+					<tr>
+						<th>Gamma</th>
+						<th>X ~ gamma(c, λ)</th>
+						<th>$λ^{c}X^{c-1}e^{-λx}/F(c)$</th>
+						<th>c/λ</th>
+						
+						<th>$c/λ^2$</th>
+					</tr>
+				</table>
+			</p>
+			
+		</div>
+		
+			
+			
+
+
+
+	</div>
+		</article>
+
+	</section>
+
+	<footer>
+		<p>All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
